@@ -1,0 +1,31 @@
+body{
+	min-height: 100vh;
+	overflow-y: hidden;
+	font-family: 'Montserrat', sans-serif;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	text-align: center;
+}
+.text{
+	margin-top: 30vh;
+	font-size: 50px;
+	color: white;
+	font-weight: 600;
+}
+.text-2{
+	font-size: 40px;
+	color: white;
+	margin-top: -40px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+.link{
+	width: 100%;
+	color: white;
+	text-decoration: none;
+	transition: .3s;
+	font-weight: 100;
+}
+.link:hover{
+	color: #bdbdbd;
+	transition: .3s;
+}
