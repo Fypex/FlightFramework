@@ -1,5 +1,16 @@
 {
     "require": {
-        "mikecao/flight": "^1.3"
+		"mikecao/flight": "^1.3",
+		"gabordemooij/redbean": "dev-master"
+    },
+    "autoload": {
+		"psr-4": {
+			"Controllers\\": "controllers/",
+			"Models\\": "models/"
+		},
+		"files": [
+		     "settings.php",
+		     "routes/routes.php"
+		]
     }
 }

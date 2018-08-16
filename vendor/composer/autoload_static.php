@@ -9,11 +9,45 @@ class ComposerStaticInit6c27ff79bda4702d659e0ff2b0593770
     public static $files = array (
         'fc73bab8d04e21bcdda37ca319c63800' => __DIR__ . '/..' . '/mikecao/flight/flight/autoload.php',
         '5b7d984aab5ae919d3362ad9588977eb' => __DIR__ . '/..' . '/mikecao/flight/flight/Flight.php',
+        'f190dbc3b76eb8deddc7e24087abec59' => __DIR__ . '/../..' . '/settings.php',
+        '3e2e16951008fcc7586f2b52bc1e3e11' => __DIR__ . '/../..' . '/routes/routes.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'RedBeanPHP\\' => 11,
+        ),
+        'M' => 
+        array (
+            'Models\\' => 7,
+        ),
+        'C' => 
+        array (
+            'Controllers\\' => 12,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'RedBeanPHP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gabordemooij/redbean/RedBeanPHP',
+        ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/models',
+        ),
+        'Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controllers',
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6c27ff79bda4702d659e0ff2b0593770::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6c27ff79bda4702d659e0ff2b0593770::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

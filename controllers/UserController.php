@@ -1,6 +1,14 @@
 <?php
 
+namespace Controllers;
+
+use Models\Model_Users as Model_Users;
+
 class UserController
 {
-	// Something code
+	public static function register($name)
+	{
+      Model_Users::register($name);
+	}
+
 }

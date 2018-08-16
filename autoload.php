@@ -1,20 +1,14 @@
 <?php
 
-spl_autoload_register(function ($class) {
+// spl_autoload_register(function ($class) {
 
+// 	$text = substr($class, -10);
+// 	$path = '../'.mb_strtolower($text).'s/';
 
-	$text = $class;
+// 	if ($text == 'Controller') {
+// 		include $path.$class.'.php';
+// 	}else{
+// 		include $path.$class.'.php';
+// 	}
 
-	$text = substr($text, -10);
-	if ($text == 'Controller') {
-		$path = '../'.mb_strtolower($text).'s/';
-		include $path.$class.'.php';
-	}
-	$text = substr($text, -5);
-	if ($text == 'Model') {
-		$path = '../'.mb_strtolower($text).'s/';
-		include $path.$class.'.php';
-	}
-
-
-});
+// });
